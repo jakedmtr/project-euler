@@ -22,8 +22,7 @@ while n != numbers[-1]:  # get rid of the numbers that are already factors of la
     n -= 1
 
 counter = 19
-step = 19
-success_count_goal = len(numbers)
+success_count_goal = len(numbers)  # to know when we have found the answer
 success_count = 0
 
 while success_count != success_count_goal:
@@ -32,12 +31,12 @@ while success_count != success_count_goal:
             success_count = 0
             break
         if counter % num == 0:
-            print(f"{counter} is divisible by {num}")
             success_count += 1
         else:
-            print(f"{counter} is NOT divisible by {num}")
             success_count = 0
-            step = num
             break
-    counter += step
+    if success_count == success_count_goal:  # for exiting once the answer is found
+        print(counter)
+        break
+    counter += 19
 
