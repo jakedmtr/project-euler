@@ -21,7 +21,7 @@ while n != numbers[-1]:  # get rid of the numbers that are already factors of la
             numbers.remove(i)
     n -= 1
 
-counter = 19
+counter = 20
 success_count_goal = len(numbers)  # to know when we have found the answer
 success_count = 0
 
@@ -38,5 +38,5 @@ while success_count != success_count_goal:
     if success_count == success_count_goal:  # for exiting once the answer is found
         print(counter)
         break
-    counter += 19
+    counter += 20
 
